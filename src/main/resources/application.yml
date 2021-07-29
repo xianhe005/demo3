@@ -1,0 +1,17 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /demo3
+
+#整合mybatis
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver #jdbc驱动
+    url: jdbc:mysql://localhost:3306/bootssm?characterEncoding=UTF-8
+    username: root
+    password: password
+
+mybatis:
+  mapper-locations: classpath:com/hxh/demo3/mapper/*.xml #mapper文件位置
+  type-aliases-package: com.hxh.demo3.entity #实体类的包名
